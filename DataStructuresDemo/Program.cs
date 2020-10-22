@@ -13,10 +13,8 @@ namespace DataStructuresDemo
             list.Display();
             list.InsertAtParticularPostion(2, 30);
             list.Display();
-            list.RemoveFirstNode();
-            list.Display();
-            list.RemoveLastNode();
-            list.Display();
+            int index = list.Search(30);
+            Console.WriteLine("30 is found at : {0}", index);
         }
     }
 }

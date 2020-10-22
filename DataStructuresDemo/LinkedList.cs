@@ -112,5 +112,21 @@ namespace DataStructuresDemo
             Console.WriteLine("\n");
         }
 
+        internal int Search(int value)
+        {
+            Node temp = this.head;
+            int count = 1; 
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    return count;
+                }
+                temp = temp.next;
+                count++;
+            }
+            return -1;
+        }
+
     }
 }
