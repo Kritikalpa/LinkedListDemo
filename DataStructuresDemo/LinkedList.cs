@@ -7,22 +7,16 @@ namespace DataStructuresDemo
     class LinkedList
     {
         internal Node head;
+        
         internal void Add(int data)
         {
             Node node = new Node(data);
-            if (this.head == null)
-                this.head = node;
-            else
-            {
-                Node temp = head;
-                while (temp.next != null)
-                {
-                    temp = temp.next;
-                }
-                temp.next = node;
-            }
-            Console.WriteLine("{0} inserted into linked list", node.data);
+            if (this.head != null)
+                node.next = this.head;
+            this.head = node;
+            Console.WriteLine("{0} added into linked list", node.data);
         }
+
 
         internal void Display()
         {
