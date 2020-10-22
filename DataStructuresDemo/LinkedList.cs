@@ -34,6 +34,40 @@ namespace DataStructuresDemo
             Console.WriteLine("{0} appended into linked list", node.data);
         }
 
+        internal Node InsertAtParticularPostion(int position, int data)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(data);
+                newNode.next = this.head;
+                head = newNode;
+            }
+            Node temp = this.head;
+            while (--position != 0)
+            {
+                if (position == 1)
+                {
+                    Node node = new Node(data);
+                    node.next = temp.next;
+                    temp.next = node;
+                    break;
+                }
+                if (temp.next != null)
+                    temp = temp.next;
+                else
+                    break;
+            }
+            if (position > 1)
+            {
+                Console.WriteLine("Position Out of Range");
+            }
+            return head;
+        }
+
         internal void Display()
         {
             Node temp = this.head;
@@ -47,6 +81,7 @@ namespace DataStructuresDemo
                 Console.Write(temp.data + " ");
                 temp = temp.next;
             }
+            Console.WriteLine("\n");
         }
 
     }
