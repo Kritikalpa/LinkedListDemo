@@ -15,6 +15,8 @@ namespace DataStructuresDemo
             list.Display();
             int index = list.Search(30);
             Console.WriteLine("30 is found at : {0}", index);
+            list.InsertAtParticularPostion(index + 1, 40);
+            list.Display();
         }
     }
 }
