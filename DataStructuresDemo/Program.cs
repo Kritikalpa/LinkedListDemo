@@ -15,6 +15,8 @@ namespace DataStructuresDemo
             list.Display();
             list.RemoveFirstNode();
             list.Display();
+            list.RemoveLastNode();
+            list.Display();
         }
     }
 }
