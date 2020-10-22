@@ -13,6 +13,8 @@ namespace DataStructuresDemo
             list.Display();
             list.InsertAtParticularPostion(2, 30);
             list.Display();
+            list.RemoveFirstNode();
+            list.Display();
         }
     }
 }
